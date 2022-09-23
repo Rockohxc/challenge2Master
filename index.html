@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name='robots' content='index, follow'>
+        <meta name='description' content='¡Juega al ahogado Online!'>
+        <link rel="shortcut icon" href="./img/iconoylogo/icono.ico">
+        <title>Ahogado online </title>
+        <link rel="stylesheet" href="./intro.css">
+        <link rel="stylesheet" href="style-ahogado.css">
+        <link rel="stylesheet" href="queries.css">
+        
+
+    </head>
+    <body>
+        <!-- Este DIV solo será la intro -->
+        <div class="intro">
+            <img src="./img/iconoylogo/R Logo.png" alt="Logo RC: Rodrigo Contreras">
+            <h1 class="logo">
+                <span class="logo-parts">R</span>
+                <span class="logo-parts">O</span>
+                <span class="logo-parts">D</span>
+                <span class="logo-parts">R</span>
+                <span class="logo-parts">I</span>
+                <span class="logo-parts">G</span>
+                <span class="logo-parts">O</span>
+                <span class="logo-parts"> </span>
+                <span class="logo-parts">C</span>
+                <span class="logo-parts">O</span>
+                <span class="logo-parts">N</span>
+                <span class="logo-parts">T</span>
+                <span class="logo-parts">R</span>
+                <span class="logo-parts">E</span>
+                <span class="logo-parts">R</span>
+                <span class="logo-parts">A</span>
+                <span class="logo-parts">S</span>
+            </h1>
+            <p>Challenge 2 ALURA LATAM + ORACLE ONE</p>
+        </div>
+        <!-- Aqui termina el DIV de la intro -->
+
+        <header>
+            <img src="./img/iconoylogo/LogoAlura.png" alt="Logo de Alura" id="logo-alura">
+        </header>
+
+        <main class="main">
+            <!-- Esta section contiene los botones y redes sociales -->
+            <section class="section-iniciar">
+                <div class="botones-iniciar">
+                    <!-- boton iniciar juego -->
+                    <input type='button' value="Iniciar juego" class="btn btn-iniciar">
+
+                    <!-- Boton agregar palabra -->
+                    <input type="button" value="Agregar palabras" class="btn btn-inicio-agregar">
+
+                    <!-- Redes sociales targeteables -->
+                    <div class="redes">
+                        <a href="https://github.com/Rockohxc" target="blank"><img src="./img/SVG/Githubimg.svg" alt="" class="imgredes"></a>
+                        <a href="https://www.linkedin.com/in/rodrigo-contreras-rubio-b70723140/" target="blank"><img src="./img/SVG/linkedinimg.svg" alt="" class="imgredes"></a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Esta section contiene boton "nuevo juego" y "Desistir" -->
+            <!-- Además contiene el teclado en pantalla -->
+            <!-- inicio del juego -->
+            <section class="section-juego-ahorcado">
+                <div class="div-imagen-ambas">
+                    <div class="div-imagen div-imagen-astro">
+                        <img src="./img/astro/astronauta6.png" alt="" class='imagen imagen-astro'>
+                    </div>
+                </div>
+
+
+                <!-- parrafo indicando las vidas restantes -->
+                <div class="div-palabra">
+                    <div class="intentos-finjuego">
+                        <p class="intentos-text">Intentos restantes: <span class="intentos"></span></p>
+                    </div>
+                    <p class="parrafo-palabra"></p>
+                </div>
+
+                
+                <!-- DIV con 3 botones dentro de el juego del ahogado -->
+                <div class="div-pista-botones">
+                    <span class="span-pista"></span>
+                    <div class="botones-juego">
+                        <button class="nuevo-juego btn2">Nuevo juego</button>
+                        <button class="desistir btn2">Desistir</button>
+                    </div>
+                </div>
+
+                <!-- DIV con el abecedario a interactuar -->
+                <div class="div-abecedario">
+                    <div class="letras-abecedario">
+                        <button id="btn-letra">A</button>
+                        <button id="btn-letra">B</button>
+                        <button id="btn-letra">C</button>
+                        <button id="btn-letra">D</button>
+                        <button id="btn-letra">E</button>
+                        <button id="btn-letra">F</button>
+                        <button id="btn-letra">G</button>
+                        <button id="btn-letra">H</button>
+                        <button id="btn-letra">I</button>
+                        <button id="btn-letra">J</button>
+                        <button id="btn-letra">K</button>
+                        <button id="btn-letra">L</button>
+                        <button id="btn-letra">M</button>
+                        <button id="btn-letra">N</button>
+                        <button id="btn-letra">O</button>
+                        <button id="btn-letra">P</button>
+                        <button id="btn-letra">Q</button>
+                        <button id="btn-letra">R</button>
+                        <button id="btn-letra">S</button>
+                        <button id="btn-letra">T</button>
+                        <button id="btn-letra">U</button>
+                        <button id="btn-letra">V</button>
+                        <button id="btn-letra">W</button>
+                        <button id="btn-letra">X</button>
+                        <button id="btn-letra">Y</button>
+                        <button id="btn-letra">Z</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- section para agregar palabra, debe ser entre 4 a 10 letras y se eliminarán cuando se actualice la página -->
+            <section class="section-agregar-palabra">
+                <!-- boton seccion para agregar palabra -->
+                <div class="div-input-agregar">
+                    <input type='text' class='input-agregar-palabra' min-length='4' maxlength='10' oninput="validarInput(this)" placeholder="Ingrese aquí su palabra...">
+                </div>
+
+                <!-- info de advertencia al recargar pagina -->
+                <div class="div-info-agregar-cancelar">
+                    <div class="info-descripcion"><img src="./img/astro/Infologo.png" alt="Información" id="img-info">
+                        <h2 class="descripcion-agregar-palabra">
+                            Si actualizas la página se perderan las palabras agregadas recientemente.
+                        </h2>
+                    </div>
+
+                    <!-- DIV con botones agregar y cancelar-->
+                    <div class="div-botones-agregar-cancelar">
+
+                        <!-- botonb agregar palabra entre 4 a 10 letras-->
+                        <button class="btn-agregar-jugar" disabled>Agregar y jugar</button>
+
+                        <!-- boton cancelar y retornar-->
+                        <button class="btn-cancelar">Cancelar</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+
+        <script src="script-ahogado.js"></script>
+        <script src="./intro.js"></script>
+    </body>
+</html>
